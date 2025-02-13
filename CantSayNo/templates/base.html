@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bro</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<body >
+    <div style="position: relative; width:100%; display: flex; align-items: center; height:550px;">
+        <div style="position: absolute; width:100%; ">
+            <img src="{% static 'FrameSanV.jpg' %}" class="frame" >
+        </div>
+        <div style="position: absolute; z-index: 1000; width:100%;">
+            {% block content %}
+{% endblock %}
+        </div>
+    </div>
+
+
+</body>
